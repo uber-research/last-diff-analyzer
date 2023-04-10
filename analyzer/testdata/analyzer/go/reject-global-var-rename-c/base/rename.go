@@ -1,0 +1,15 @@
+package rename
+
+import "fmt"
+
+var intVar = 7
+
+// rename tests renaming of global and local variables
+func rename(b bool) int {
+	if b {
+		intVar := 42
+		fmt.Println(intVar)
+		return intVar
+	}
+	return intVar
+}

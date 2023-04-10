@@ -1,0 +1,26 @@
+--- /dev/null
++++ rename.java
++public class rename {
++    private static final int c1 = 42;
++    private final int c2 = c1 + 7;
++    int renameField() {
++        return c1 + c2;
++    }
++    int renameLocalA(boolean p) {
++        final int c3 = 42;
++        if (p) {
++            final int c4 = 7;
++            return c4;
++        }
++        return c3;
++    }
++    int renameLocalB(boolean p) {
++        final int c3 = 42;
++        if (p) {
++            final int c4 = 7;
++            return c3;
++        }
++        return c3;
++    }
++}
+

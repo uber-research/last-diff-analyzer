@@ -1,0 +1,24 @@
+--- /dev/null
++++ comment.go
++package comment
++// Foo is a dummy function
++func Foo() bool {
++	return true
++}
++// SimpleComment tests the simplest comment version
++func SimpleComment(b bool) int {
++	return 42
++}
++// EndingComment tests a comment ending the line
++func EndingComment(b bool) int {
++	return 42
++}
++// LongComment tests a comment that would span many lines
++func LongComment(b bool) int {
++	return 42
++}
+--- /dev/null
++++ data.cfg
++This file is meant to emulate a non-go config file and related changes that cannot be auto-approved (as, generally, we don'd know what the file actually configures). Here is the part being changed:
++Darwin
+

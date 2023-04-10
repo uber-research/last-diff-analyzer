@@ -1,0 +1,20 @@
+--- /dev/null
++++ variadic.go
++package variadic
++import "fmt"
++// foo is actual test function for verifying that passing variadic
++// argument args to bar with and without trailing ... is not
++// equivalent
++func foo(p interface{}, args ...interface{}) {
++	bar(p, args...)
++}
++func bar(p interface{}, args ...interface{}) {
++	fmt.Println(p)
++	for _, a := range args {
++		fmt.Println(a)
++	}
++}
++func main() {
++	foo(7, 4, 1, 0)
++}
+

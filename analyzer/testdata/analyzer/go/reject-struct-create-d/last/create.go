@@ -1,0 +1,12 @@
+package create
+
+type someStruct struct {
+	firstField, secondField int
+	thirdField              string
+}
+
+// useNames tests struct construction non-equivalence where a list of key-value pairs is replaced with a name-less list
+// technically we could support this case, but this goes against Go style convention that recommends using named fields
+func useNames() someStruct {
+	return someStruct{7, 42, "hello"}
+}

@@ -1,0 +1,15 @@
+--- /dev/null
++++ rename.go
++package rename
++import (
++	fmt_import "fmt"
++	my_fmt_import "fmt"
++)
++// replace tests (incorrect) replacement of the package alias (instead
++// of the package alias being renamed)
++func replace(i int) int {
++	fmt_import.Println(i)
++	my_fmt_import.Println(i)
++	return i
++}
+

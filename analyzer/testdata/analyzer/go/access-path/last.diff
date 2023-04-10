@@ -1,0 +1,22 @@
+--- /dev/null
++++ access_path.go
++package path
++import pkgRenamed "somePkg"
++// This tests the handlings of access paths, the only change happens at the first component of all access paths to test
++// the ability of the analyzer to automatically approve them.
++const a = pkgRenamed.a.b.c().d
++type S1 struct {
++	a int
++}
++type S2 struct {
++	b S1
++}
++type I1 interface {
++	someFunc() S2
++}
++func test(bRenamed I1, cRenamed S2) int {
++	k := bRenamed.someFunc().b.a
++	m := (&cRenamed).b.a
++	return k + m
++}
+

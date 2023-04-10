@@ -1,0 +1,32 @@
+--- /dev/null
++++ scope.java
++package hello.world.scope;
++// test renaming of private field inside public class and public field inside private class.
++public class Test {
++  private int a;
++  private void anotherUse() {
++    int a = 1;
++    if (a > 5) {
++      int b = 2;
++    }
++    this.use();
++  }
++  private void use() {
++    this.a = 1;
++  }
++}
++// explicit private class
++private class Test2 {
++  public int a;
++  private void use() {
++    this.a = 1;
++  }
++}
++// package level class
++class Test3 {
++  private int a;
++  private void use() {
++    this.a = 1;
++  }
++}
+

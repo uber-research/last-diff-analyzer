@@ -1,0 +1,9 @@
+package add
+
+import "time"
+
+// addGlobal tests adding globally defined constants to replace a
+// literal use, but with a small literal value change
+func addGlobal() time.Duration {
+	return 10 * time.Second
+}

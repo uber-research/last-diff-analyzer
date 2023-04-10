@@ -1,0 +1,15 @@
+--- /dev/null
++++ define.go
++package rename
++const (
++	packageConstA = iota + 1
++	packageConstB
++)
+--- /dev/null
++++ enum.go
++package enum
++// enum tests correct handling of package-level consts that have no (explicit) value (no auto-approval but also no crash)
++func enum() int {
++	return packageConstA + packageConstB
++}
+

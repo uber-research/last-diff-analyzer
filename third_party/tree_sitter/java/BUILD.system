@@ -1,0 +1,11 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "treesitterjavalib",
+    srcs = [
+        "parser.c",
+        "tree_sitter/parser.h",
+    ],
+    includes = ["."],
+    visibility = ["//visibility:public"],
+)

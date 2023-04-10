@@ -1,0 +1,5 @@
+--- /dev/null
++++ mod.go
++package mod
++const someConst = 7
+

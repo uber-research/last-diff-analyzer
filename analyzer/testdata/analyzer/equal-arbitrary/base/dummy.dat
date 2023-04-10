@@ -1,0 +1,5 @@
+This is just a file with arbitrary content and arbitrary not explictly
+supported (analyzable) extension that can nevertheless be
+auto-approved if its content does not change between base diff and
+last diff (which can happen during rebase despite Phab reporting a
+change between patches).

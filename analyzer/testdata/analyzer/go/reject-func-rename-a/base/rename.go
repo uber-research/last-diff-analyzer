@@ -1,0 +1,11 @@
+package rename
+
+// ExportedFoo tests exported function renaming
+func ExportedFoo() int {
+	return 0
+}
+
+// rename tests (incorrect) renaming of exported function
+func rename() int {
+	return ExportedFoo()
+}

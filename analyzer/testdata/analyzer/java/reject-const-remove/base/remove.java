@@ -1,0 +1,10 @@
+public class remove {
+
+    int v1 = 0;
+
+    // non-private const cannot be safely removed
+    static final int c1 = 42;
+
+    int v2 = 1;
+    
+}

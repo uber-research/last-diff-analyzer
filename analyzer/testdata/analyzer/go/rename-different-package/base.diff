@@ -1,0 +1,52 @@
+--- /dev/null
++++ another_define.go
++package another
++// intentionally use the same name as in the rename package to test if the symbolication correctly links the identifiers.
++var (
++	packageVarA = 1
++	packageVarB = 0
++)
+--- /dev/null
++++ another_use.go
++package another
++func main() int {
++	return packageVarA
++}
+--- /dev/null
++++ define.go
++package rename
++var (
++	packageVarA = 1
++	packageVarB = 0
++)
+--- /dev/null
++++ rename.go
++package rename
++var intVar = 7
++// renameA tests renaming of global (and optionally local) variables (variant a)
++func renameA() int {
++	intVar += 42
++	return intVar + packageVarA
++}
++// renameB tests renaming of global (and optionally local) variables (variant b)
++func renameB() int {
++	intVar := 42
++	return intVar + packageVarB
++}
++// renameC tests renaming of global (and optionally local) variables (variant c)
++func renameC(b bool) int {
++	if b {
++		intVar = 42
++		return intVar
++	}
++	return intVar
++}
++// renameD tests renaming of global (and optionally local) variables (variant d)
++func renameD(b bool) int {
++	if b {
++		intVar := 42
++		return intVar
++	}
++	return intVar
++}
+

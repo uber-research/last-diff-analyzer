@@ -1,0 +1,8 @@
+package test;
+
+class Test {
+
+  public int Test(int aRenamed) {
+    return aRenamed + 1; // this changes the behavior
+  }
+}

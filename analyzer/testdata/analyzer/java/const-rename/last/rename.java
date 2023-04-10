@@ -1,0 +1,29 @@
+public class rename {
+
+    private static final int c1Renamed = 42;
+    
+    private final int c2Renamed = c1Renamed + 7;
+    
+    int renameField() {
+        return c1Renamed + c2Renamed;
+    }
+    
+    int renameLocalA(boolean p) {
+        final int c3Renamed = 42;
+        if (p) {
+            final int c4Renamed = 7;
+            return c4Renamed;
+        }
+        return c3Renamed;
+    }
+
+    int renameLocalB(boolean p) {
+        final int c3Renamed = 42;
+        if (p) {
+            final int c4Renamed = 7;
+            return c3Renamed;
+        }
+        return c3Renamed;
+    }
+
+}

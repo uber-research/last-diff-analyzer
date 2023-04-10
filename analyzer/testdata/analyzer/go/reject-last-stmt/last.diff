@@ -1,0 +1,28 @@
+--- /dev/null
++++ reject.go
++package test
++import "go.uber.org/zap"
++var logger = zap.NewExample()
++func getLogger() *zap.Logger {
++	return logger
++}
++func foo(b1 bool, b2 bool) bool {
++	cond := b1
++	if cond {
++		return false
++	}
++	if b2 {
++		// this is the key part - incorrect implementation was
++		// stopping comparing statements after encountering equivalent
++		// logging call with (the same) access path whose side-effect
++		// freedom could not be verified
++		getLogger().Warn("message")
++		return false
++	}
++	ret := b2
++	if b2 {
++		ret = b1
++	}
++	return ret
++}
+

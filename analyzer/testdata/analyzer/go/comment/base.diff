@@ -1,0 +1,20 @@
+--- /dev/null
++++ comment.go
++package comment
++// Foo is a dummy function
++func Foo() bool {
++	return true
++}
++// SimpleComment tests the simplest comment version
++func SimpleComment(b bool) int {
++	return 42
++}
++// EndingComment tests a comment ending the line
++func EndingComment(b bool) int {
++	return 42
++}
++// LongComment tests a comment that would span many lines
++func LongComment(b bool) int {
++	return 42
++}
+

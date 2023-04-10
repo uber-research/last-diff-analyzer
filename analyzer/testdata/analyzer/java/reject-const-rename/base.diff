@@ -1,0 +1,11 @@
+--- /dev/null
++++ rename.java
++public class rename {
++    static final int c1 = 42;
++    private final int c2 = c1 + 7;
++    // renameField tests (incorrect) renaming of non-private constant
++    int renameField() {
++        return c1 + c2;
++    }
++}
+

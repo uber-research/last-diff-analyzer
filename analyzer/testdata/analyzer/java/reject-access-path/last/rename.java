@@ -1,0 +1,17 @@
+package test;
+
+// Due to incomplete handling of access paths in the symbolicators (i.e., only the first identifier will be resolved),
+// renaming "a" in "Foo.this.a" will result in a rejection from the analyzer.
+
+class Foo {
+  private String aRenamed;
+
+  // Note: not a static class, so it's associated with an instance of Foo
+  public class Bar {
+    private String a; // unused.
+
+    public void baz() {
+      Foo.this.aRenamed = "Set field of outer class";
+    }
+  }
+}

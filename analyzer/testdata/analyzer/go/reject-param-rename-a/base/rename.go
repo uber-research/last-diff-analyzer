@@ -1,0 +1,14 @@
+package rename
+
+import "fmt"
+
+// rename tests parameter renaming in nested function
+func rename(i int) int {
+
+	f := func(i int) int {
+		fmt.Println(i)
+		return i
+	}
+
+	return i + f(7)
+}

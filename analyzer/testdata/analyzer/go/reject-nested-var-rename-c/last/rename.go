@@ -1,0 +1,16 @@
+package rename
+
+import "fmt"
+
+// redefine tests renaming of a local variable that involves redefinition
+func redefine(b bool) int {
+	fooRenamed := 42
+
+	if b {
+		foo := 7
+		fmt.Println(foo)
+		return fooRenamed
+	}
+
+	return fooRenamed
+}

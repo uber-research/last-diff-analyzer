@@ -1,0 +1,4 @@
+--- /dev/null
++++ dummy.go
++package dummy
+

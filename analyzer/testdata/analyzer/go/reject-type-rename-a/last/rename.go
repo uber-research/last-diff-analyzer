@@ -1,0 +1,14 @@
+package rename
+
+import "fmt"
+
+// ExportedTestRenamed tests exported function renaming
+type ExportedTestRenamed struct {
+	intValue int
+}
+
+// rename tests (incorrect) renaming of exported type
+func rename(i int) int {
+	fmt.Println(ExportedTestRenamed{})
+	return i
+}

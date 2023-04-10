@@ -1,0 +1,14 @@
+--- /dev/null
++++ rename.go
++package rename
++type str struct {
++	i int
++	j int
++}
++// create tests if renaming parameter and both key and value of the
++// expression initializing the struct will be auto-approved. It should
++// not be, but symbolication information implies that it might.
++func create(j int) str {
++	return str{j: j}
++}
+

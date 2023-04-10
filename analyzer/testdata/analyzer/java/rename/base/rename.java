@@ -1,0 +1,43 @@
+package rename;
+
+private class Test1 {
+}
+
+private class Test2 {
+
+}
+
+class Rename {
+  // test field renaming
+  private int m = 1;
+  private int n = 2;
+
+  // test parameter renaming
+  private int someMethod(int b) {
+    // test local variable renaming
+    int a = 1;
+    Test1 t1;
+    Test2 t2;
+    return a + b;
+  }
+
+  private int someOtherMethod() {
+    // test local variable renaming
+    int a = 1;
+    Test3 t3;
+
+    // "this" keyword can actually be omitted, so we test the four possibilities
+    // here.
+    this.m = this.someMethod(a);
+    n = this.someMethod(a);
+    this.n = someMethod(a);
+    n = someMethod(a);
+
+    int n = 3; // shadowing the field declaration
+    n = this.someMethod(a);
+  }
+}
+
+private class Test3 {
+
+}

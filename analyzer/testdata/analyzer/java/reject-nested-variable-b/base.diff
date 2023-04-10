@@ -1,0 +1,16 @@
+--- /dev/null
++++ rename.java
++package rename;
++class Test {
++  int method(boolean b) {
++    int foo = 42;
++    int bar = 7;
++    if (b) {
++      foo = 1;
++      bar = 0;
++      return bar;
++    }
++    return bar;
++  }
++}
+

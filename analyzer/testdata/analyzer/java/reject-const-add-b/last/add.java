@@ -1,0 +1,12 @@
+public class add {
+
+    private static final int c1 = 42;
+    
+    final int c3 = c1 + 7;
+
+    // addGlobal tests adding non-private constants to replace a
+    // literal use
+    int addField() {
+        return c3;
+    }
+}

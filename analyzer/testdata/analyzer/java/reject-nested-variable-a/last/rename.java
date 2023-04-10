@@ -1,0 +1,17 @@
+package rename;
+
+class Test {
+  int method(boolean b) {
+    int foo = 42;
+    int bar = 7;
+    int bazRenamed = 44;
+
+    if (b) {
+      foo = 1;
+      bazRenamed = 0;
+      return bar;
+    }
+
+    return foo + bazRenamed;
+  }
+}

@@ -1,0 +1,12 @@
+package create
+
+type someStruct struct {
+	firstField, secondField int
+	thirdField              string
+}
+
+// useNames tests struct construction non-equivalence where a name-less list is replaced with a list of key-value pairs
+// technically we could support this case (reordering) but it would be complicated and ROI is unclear
+func useNames() someStruct {
+	return someStruct{firstField: 7, thirdField: "hello", secondField: 42}
+}

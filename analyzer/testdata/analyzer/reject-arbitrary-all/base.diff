@@ -1,0 +1,5 @@
+--- /dev/null
++++ data.cfg
++This file is meant to emulate a non-go config file and related changes that cannot be auto-approved (as, generally, we don'd know what the file actually configures). Here is the part being changed:
++Linux
+

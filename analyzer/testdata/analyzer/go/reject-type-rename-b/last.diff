@@ -1,0 +1,13 @@
+--- /dev/null
++++ rename.go
++package rename
++import "fmt"
++type exportedField struct {
++	ExportedValueRenamed int
++}
++// rename tests (incorrect) renaming of exported struct field
++func rename(i int) int {
++	fmt.Println(exportedField{ExportedValueRenamed: i})
++	return i
++}
+

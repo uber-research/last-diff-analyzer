@@ -1,0 +1,19 @@
+package logging
+
+import "go.uber.org/zap"
+
+var logger = zap.NewExample()
+
+func foo(s string) int {
+	return len(s)
+}
+
+func bar(s string) int {
+	return len(s)
+}
+
+// modFun tests a modification of the argument to the logging method
+// that involves custom function call (to be rejected)
+func modFun(s1 string, s2 string) {
+	logger.Error("error", zap.Int("key1", len(s1)), zap.Int("key2", bar(s2)))
+}

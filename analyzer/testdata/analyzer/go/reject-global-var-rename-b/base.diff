@@ -1,0 +1,17 @@
+--- /dev/null
++++ define.go
++package rename
++var (
++	packageVarA = 1
++	packageVarB = 0
++)
+--- /dev/null
++++ rename.go
++package rename
++// replace tests (incorrect) replacement of global var defined in a
++// different file (instead of having the var renamed - at the level of
++// this file's AST there is no difference)
++func replace() int {
++	return packageVarA
++}
+

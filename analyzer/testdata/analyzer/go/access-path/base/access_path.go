@@ -1,0 +1,26 @@
+package path
+
+import pkg "somePkg"
+
+// This tests the handlings of access paths, the only change happens at the first component of all access paths to test
+// the ability of the analyzer to automatically approve them.
+
+const a = pkg.a.b.c().d
+
+type S1 struct {
+	a int
+}
+
+type S2 struct {
+	b S1
+}
+
+type I1 interface {
+	someFunc() S2
+}
+
+func test(b I1, c S2) int {
+	k := b.someFunc().b.a
+	m := (&c).b.a
+	return k + m
+}

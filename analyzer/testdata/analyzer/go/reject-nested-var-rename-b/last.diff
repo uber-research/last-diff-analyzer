@@ -1,0 +1,15 @@
+--- /dev/null
++++ rename.go
++package rename
++// rename tests renaming of local variables that involves nesting
++func rename(b bool) int {
++	fooRenamed := 42
++	barRenamed := 7
++	if b {
++		fooRenamed = 1
++		fooRenamed = 0
++		return barRenamed
++	}
++	return fooRenamed
++}
+

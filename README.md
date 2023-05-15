@@ -89,4 +89,4 @@ For research purposes only.  This project is released "as-is" with no support ex
 
 ## License
 
-Apache 2.0
+This project is copyright 2023 Uber Technologies, Inc., and licensed under Apache 2.0.

@@ -1,6 +1,5 @@
 .idea/
 .ijwb/
-bazel-*/
 
 # Binaries for programs and plugins
 *.exe
@@ -8,9 +7,15 @@ bazel-*/
 *.dll
 *.so
 *.dylib
+*.swp
+
+# Bazel folders
+bazel-*
 
 # Test binary, built with `go test -c`
 *.test
+# But not test files for bazel
+!BUILD.bazel.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
@@ -21,4 +26,3 @@ bazel-*/
 # Go workspace file
 go.work
 
-bazel-*/

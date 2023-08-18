@@ -1,0 +1,37 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
+go_library(
+    name = "name1",
+    env_config = "name.yaml",
+    env_files = ["//src/target:a"],
+    services = ["//src/shared"],
+    tests = [
+        "//src/target1",
+        "//src/target2",
+        "//src/target3",
+    ],
+    visibility = ["//visibility:private"],
+)
+go_library(
+    name = "go_default_library",
+    srcs = ["main.go"],
+    importpath = "pkg1",
+    visibility = ["//visibility:private"],
+    deps = [
+        ":name1",
+        "//target1",
+        "@org_uber_go_fx//:go_default_library",
+    ],
+)
+go_binary(
+    name = "shared",
+    data = [
+        "//target1/target2",
+    ],
+    embed = [":go_default_library"],
+    visibility = ["//visibility:public"],
+)
+go_test(
+    name = "go_default_test",
+    srcs = ["main_test.go"],
+    embed = [":go_default_library"],
+)

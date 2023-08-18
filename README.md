@@ -75,6 +75,13 @@ As discussed, we do not provide actual integration code in this repository. Howe
 
 Note that you need to have bazel installed since this project is built and managed by bazel.
 
+Alternatively, you can run bazel using the official bazel docker container with directory mounting:
+```bash
+> docker run --rm -v $(pwd):/workspace -w /workspace gcr.io/bazel-public/bazel:6.3.2 test //analyzer/...
+```
+
+See the [official documentation](https://bazel.build/install/docker-container) on more details for running the official bazel docker container. 
+
 ## Citing this work
 
 You are encouraged to cite the following paper if you use this tool in academic research:

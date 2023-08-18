@@ -1,0 +1,7 @@
+# Install
+
+As stated in the REQUIREMENTS document, modern bazel and gcc are required for running tests on Last-Diff Analyzer. 
+
+Installing bazel and gcc depends on your OS and distro, and you can find the instructions from your distribution provider or generally at https://bazel.build/ and https://gcc.gnu.org/install/.
+
+Alternatively, you can install [docker](https://www.docker.com/) and run the tests via docker instead.

@@ -1,0 +1,28 @@
+# Requirements
+
+### Hardware
+
+Last-Diff Analyzer does not require any specific hardware to run, any modern hardware (any modern X86 or ARM CPU with >=8G ram) should be perfectly capable of running Last-Diff Analyzer.
+
+### Software
+
+Any modern Linux or macOS are both accepted (Windows should be OK as well but not tested). The only software requirements are [bazel](https://bazel.build/) and a modern C compiler (gcc or clang).
+
+### Environment
+
+Specifically, we have tested Last-Diff Analyzer in the following environments and confirmed it working:
+
+Hardware: macbook Pro 16-inch, 2021 with M1 Max CPU and 64GB ram
+OS: macOS 13.5
+bazel: bazel 6.1.1-homebrew
+clang: Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+
+
+Hardware: Cloud VM with AMD EPYC 7B13 and 378G ram
+OS: Debian GNU/Linux 10
+bazel: bazel 5.4.1
+gcc: gcc (Debian 8.3.0-6) 8.3.0
+
+Additionally, you can run bazel using the official docker container such that environments are always. We have confirmed it working on Linux with docker version `Docker version 24.0.5, build ced0996`.
+
+Please refer to [Run](https://github.com/uber-research/last-diff-analyzer#run) section in README on how to run the tests.

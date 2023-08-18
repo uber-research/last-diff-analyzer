@@ -1,0 +1,15 @@
+# Status
+
+### Available
+
+Last-Diff Analyzer is publicly available at https://github.com/uber-research/last-diff-analyzer
+
+### Functional & Reusable
+
+We have provided the following within the repository for Last-Diff Analyzer to be verifiable and reusable for other researchers and/or developers:
+
+* [Extensive test suites](https://github.com/uber-research/last-diff-analyzer/tree/main/analyzer/testdata) to ensure the functionalities of Last-Diff Analyzer;
+* Instructions on how to run all tests and develop new integration with other code-hosting platforms;
+* Thorough documentation on [all code](https://github.com/uber-research/last-diff-analyzer/tree/main/analyzer) within the repository.
+
+Note that since the figures and experiments rely on Uber internal code, we do not provide instructions to reproduce the evaluations. However, we believe that our extensive test suites serve as evidence that the features discussed in the paper are implemented in Last-Diff Analyzer. Additionally, the instructions we listed in the README for adding new integrations with other repositories or code-hosting platforms, along with the thorough documentation on code itself, make Last-Diff Analyzer reusable in other researches and/or industry settings.

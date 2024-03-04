@@ -86,8 +86,14 @@ See the [official documentation](https://bazel.build/install/docker-container) o
 
 You are encouraged to cite the following paper if you use this tool in academic research:
 
-```
-(TO BE ADDED)
+```bibtex
+@inproceedings{wang2023last,
+  title={Last Diff Analyzer: Multi-language Automated Approver for Behavior-Preserving Code Revisions},
+  author={Wang, Yuxin and Welc, Adam and Clapp, Lazaro and Chen, Lingchao},
+  booktitle={Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  pages={1693--1704},
+  year={2023}
+}
 ```
 
 ## Support

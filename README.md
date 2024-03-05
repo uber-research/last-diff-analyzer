@@ -15,7 +15,7 @@ Most importantly, Last Diff Analyzer provides a highly-extensible multi-language
 More technical details can be found in the paper.
 
 ## Integration
-> **Warning** 
+> [!WARNING]  
 > We do not provide integration code in this repository, the following lists the logic for integrating with any code hosting platforms that support getting diff files and the actual source code between or at specific commits.
 
 Last Diff Analyzer is platform-agnostic, meaning that you can integrate it with your preferred code hosting platforms. 
